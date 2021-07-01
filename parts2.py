@@ -34,7 +34,10 @@ for i in out:
     percentage_int = int(percentage_str)
     if percentage_int >= 90:
         print(drive + " " + percentage_str)
-        lowondiskspace.append(drive)
+        if("snap" in drive):
+                print("Nem tesszuk az e-mailbe.")
+        else:
+                lowondiskspace.append(drive)
     # print(drive + " " + percentage_str)
 
 szervernev = socket.getfqdn()
